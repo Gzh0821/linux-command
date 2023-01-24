@@ -49,8 +49,8 @@ const contributorsPath = path.resolve(process.cwd(), 'CONTRIBUTORS.svg');
       path.resolve(deployDir, 'index.html'),
       {
         p: '/index.html',
-        n: 'Linux命令搜索引擎',
-        d: '最专业的Linux命令大全，内容包含Linux命令手册、详解、学习，值得收藏的Linux命令速查手册。',
+        n: 'Linux wiki',
+        d: 'Linux wiki，Linux命令手册。',
         command_length: jsonData.data.length
       }
     );
@@ -61,7 +61,7 @@ const contributorsPath = path.resolve(process.cwd(), 'CONTRIBUTORS.svg');
       {
         p: '/list.html',
         n: '搜索',
-        d: '最专业的Linux命令大全，命令搜索引擎，内容包含Linux命令手册、详解、学习，值得收藏的Linux命令速查手册。',
+        d: 'Linux wiki，Linux命令手册。',
         command_length: jsonData.data.length
       }
     );
@@ -72,7 +72,7 @@ const contributorsPath = path.resolve(process.cwd(), 'CONTRIBUTORS.svg');
       {
         p: '/hot.html',
         n: '搜索',
-        d: '最专业的Linux命令大全，命令搜索引擎，内容包含Linux命令手册、详解、学习，值得收藏的Linux命令速查手册。',
+        d: 'Linux wiki，Linux命令手册。',
         arr: jsonData.data,
         command_length: jsonData.data.length
       }
@@ -89,7 +89,7 @@ const contributorsPath = path.resolve(process.cwd(), 'CONTRIBUTORS.svg');
       {
         p: '/contributors.html',
         n: '搜索',
-        d: '最专业的Linux命令大全，命令搜索引擎，内容包含Linux命令手册、详解、学习，值得收藏的Linux命令速查手册。',
+        d: 'Linux wiki，Linux命令手册。',
         arr: jsonData.data,
         command_length: jsonData.data.length,
         contributors: svgStr,
