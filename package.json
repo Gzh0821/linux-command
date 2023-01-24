@@ -1,8 +1,7 @@
 {
   "name": "linux-command",
   "version": "1.13.1",
-  "description": "Linux Command",
-  "homepage": "https://jaywcjlove.github.io/linux-command/",
+  "description": "Linux Command Wiki",
   "main": "dist/data.json",
   "scripts": {
     "start": "npm run build",
@@ -18,11 +17,11 @@
     "Linux",
     "Command"
   ],
-  "author": "kenny wang <wowohoo@qq.com>",
+  "author": "Gaozih",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaywcjlove/linux-command.git"
+    "url": "git+https://github.com/Gzh0821/linux-command.git"
   },
   "devDependencies": {
     "@uiw/github-corners": "~1.5.11",
