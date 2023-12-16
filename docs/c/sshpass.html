@@ -5,11 +5,11 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-    <meta name="description" content="unalias:删除由alias设置的别名 - ">
-    <meta name="keywords" content="Linux,Command,Linux wiki,unalias,删除由alias设置的别名">
-    <title>unalias 命令：删除由alias设置的别名 -  Linux wiki</title>
+    <meta name="description" content="sshpass:免交互 SSH 登录工具。 - ">
+    <meta name="keywords" content="Linux,Command,Linux wiki,sshpass,免交互 SSH 登录工具。">
+    <title>sshpass 命令：免交互 SSH 登录工具。 -  Linux wiki</title>
     <link rel="shortcut icon" href="../img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="../css/index.css?v=1702715436553">
+    <link rel="stylesheet" type="text/css" href="../css/index.css?v=1702715436082">
     <script src="../js/dark-mode.min.js"></script>
     <script type="module" src="../js/github-corners.js"></script>
 </head>
@@ -29,7 +29,7 @@
           </ul>
           <input type="text" class="query" id="query" autocomplete="off" autofocus="autofocus" placeholder="Linux 命令搜索"/>
           <div class="enter-input">
-              <input type="hidden" id="current_path" value="D:\vscode\linuxwiki\linux-command\.deploy\c\unalias.html">
+              <input type="hidden" id="current_path" value="D:\vscode\linuxwiki\linux-command\.deploy\c\sshpass.html">
               <button id="search_btn">搜索</button>
           </div>
       </div>
@@ -40,9 +40,9 @@
 <div class="markdown-body">
 <!-- 
 <span class="edit_btn">
-<a target="_blank" href="https://github.com/jaywcjlove/linux-command/edit/master/command/unalias.md">纠正错误</a> 
+<a target="_blank" href="https://github.com/jaywcjlove/linux-command/edit/master/command/sshpass.md">纠正错误</a> 
 <span class="split"></span>
-<a target="_blank" href="https://github.com/jaywcjlove/linux-command/edit/master/command/unalias.md">添加实例</a>
+<a target="_blank" href="https://github.com/jaywcjlove/linux-command/edit/master/command/sshpass.md">添加实例</a>
 </span>
  -->
 
@@ -131,64 +131,68 @@ class MarkdownStyle extends HTMLElement {
     }
 }
 customElements.define('markdown-style', MarkdownStyle);</script><markdown-style style="max-width: 960px; margin: 0 auto 60px auto; padding: 8px;" class="markdown-style">
-<h1 id="unalias"><a class="anchor" aria-hidden="true" tabindex="-1" href="#unalias"><span class="octicon octicon-link"></span></a>unalias</h1>
-<p>删除由alias设置的别名</p>
-<h2 id="概要"><a class="anchor" aria-hidden="true" tabindex="-1" href="#概要"><span class="octicon octicon-link"></span></a>概要</h2>
-<pre class="language-shell"><code class="language-shell code-highlight"><span class="code-line line-number" line="1"><span class="token builtin class-name">unalias</span> <span class="token punctuation">[</span>-a<span class="token punctuation">]</span> name <span class="token punctuation">[</span>name <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
-</span></code><div onclick="copied(this)" data-code="unalias [-a] name [name ...]
-" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
-<h2 id="主要用途"><a class="anchor" aria-hidden="true" tabindex="-1" href="#主要用途"><span class="octicon octicon-link"></span></a>主要用途</h2>
-<ul>
-  <li>删除一个或多个别名。</li>
-  <li>删除全部已定义的别名。</li>
-</ul>
-<h2 id="选项"><a class="anchor" aria-hidden="true" tabindex="-1" href="#选项"><span class="octicon octicon-link"></span></a>选项</h2>
-<pre class="language-shell"><code class="language-shell code-highlight"><span class="code-line line-number" line="1">-a：删除全部已定义的别名。
-</span></code><div onclick="copied(this)" data-code="-a：删除全部已定义的别名。
-" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
-<h2 id="参数"><a class="anchor" aria-hidden="true" tabindex="-1" href="#参数"><span class="octicon octicon-link"></span></a>参数</h2>
-<p>name：指定要删除的一个或多个已定义的别名。</p>
-<h3 id="返回值"><a class="anchor" aria-hidden="true" tabindex="-1" href="#返回值"><span class="octicon octicon-link"></span></a>返回值</h3>
-<p>unalias返回true除非您要删除的别名未定义。</p>
-<h2 id="例子"><a class="anchor" aria-hidden="true" tabindex="-1" href="#例子"><span class="octicon octicon-link"></span></a>例子</h2>
-<pre class="language-shell"><code class="language-shell code-highlight"><span class="code-line line-number" line="1"><span class="token comment"># 删除全部已定义的别名</span>
-</span><span class="code-line line-number" line="2"><span class="token builtin class-name">unalias</span> <span class="token parameter variable">-a</span>
+<h1 id="sshpass"><a class="anchor" aria-hidden="true" tabindex="-1" href="#sshpass"><span class="octicon octicon-link"></span></a>sshpass</h1>
+<p>免交互 SSH 登录工具。</p>
+<h2 id="补充说明"><a class="anchor" aria-hidden="true" tabindex="-1" href="#补充说明"><span class="octicon octicon-link"></span></a>补充说明</h2>
+<p>免交互 SSH 登录工具，但不要用在生产服务器上。</p>
+<p>如果你想自动在 SSH 登录提示符中提供<strong>密码</strong>和<strong>用户名</strong>怎么办？这时 <strong>sshpass</strong> 就可以帮到你了。</p>
+<p><strong>sshpass</strong> 是一个简单、轻量级的命令行工具，通过它我们能够向命令提示符本身提供密码（非交互式密码验证）。</p>
+<h3 id="安装"><a class="anchor" aria-hidden="true" tabindex="-1" href="#安装"><span class="octicon octicon-link"></span></a>安装</h3>
+<pre class="language-shell"><code class="language-shell code-highlight"><span class="code-line line-number" line="1"><span class="token comment"># RedHat/CentOS</span>
+</span><span class="code-line line-number" line="2">yum <span class="token function">install</span> sshpass
 </span><span class="code-line line-number" line="3">
-</span><span class="code-line line-number" line="4"><span class="token comment"># 删除已定义的别名（假设当前环境存在以下别名）</span>
-</span><span class="code-line line-number" line="5"><span class="token builtin class-name">unalias</span> <span class="token function">vi</span>
-</span><span class="code-line line-number" line="6"><span class="token builtin class-name">unalias</span> <span class="token function">ls</span> <span class="token function">grep</span>
-</span></code><div onclick="copied(this)" data-code="# 删除全部已定义的别名
-unalias -a
+</span><span class="code-line line-number" line="4"><span class="token comment"># Debian/Ubuntu</span>
+</span><span class="code-line line-number" line="5"><span class="token function">apt-get</span> <span class="token function">install</span> sshpass
+</span></code><div onclick="copied(this)" data-code="# RedHat/CentOS
+yum install sshpass
 
-# 删除已定义的别名（假设当前环境存在以下别名）
-unalias vi
-unalias ls grep
+# Debian/Ubuntu
+apt-get install sshpass
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
-<h2 id="错误用法"><a class="anchor" aria-hidden="true" tabindex="-1" href="#错误用法"><span class="octicon octicon-link"></span></a>错误用法</h2>
-<ul>
-  <li>
-    <p>要删除的别名未定义。</p>
-  </li>
-  <li>
-    <p>不使用-a选项时没有传递name参数。</p>
-  </li>
-</ul>
-<h3 id="注意"><a class="anchor" aria-hidden="true" tabindex="-1" href="#注意"><span class="octicon octicon-link"></span></a>注意</h3>
-<ol>
-  <li><strong>执行脚本时请注意：</strong></li>
-</ol>
-<blockquote>
-  <p>使用<code>source</code>命令执行的bash脚本如果执行了<code>alias</code>或<code>unalias</code>命令，那么有可能会对终端环境的别名设置产生影响；终端环境的别名设置也可能改变运行结果；</p>
-  <p>通过<code>sh</code>方式调用的bash脚本或直接运行当前用户有执行权限的脚本不受终端环境的别名影响。</p>
-</blockquote>
-<ol start="2">
-  <li>
-    <p>查看及设置别名，请查看<code>alias</code>命令。</p>
-  </li>
-  <li>
-    <p>该命令是bash内建命令，相关的帮助信息请查看<code>help</code>命令。</p>
-  </li>
-</ol>
+<h3 id="语法"><a class="anchor" aria-hidden="true" tabindex="-1" href="#语法"><span class="octicon octicon-link"></span></a>语法</h3>
+<pre class="language-shell"><code class="language-shell code-highlight"><span class="code-line line-number" line="1">sshpass <span class="token punctuation">(</span>选项<span class="token punctuation">)</span>
+</span></code><div onclick="copied(this)" data-code="sshpass (选项)
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="选项"><a class="anchor" aria-hidden="true" tabindex="-1" href="#选项"><span class="octicon octicon-link"></span></a>选项</h3>
+<pre class="language-shell"><code class="language-shell code-highlight"><span class="code-line line-number" line="1">用法: sshpass <span class="token punctuation">[</span>-f<span class="token operator">|</span>-d<span class="token operator">|</span>-p<span class="token operator">|</span>-e<span class="token punctuation">]</span> <span class="token punctuation">[</span>-hV<span class="token punctuation">]</span> 命令 参数
+</span><span class="code-line line-number" line="2">    <span class="token parameter variable">-f</span> 文件名     从文件中获取密码
+</span><span class="code-line line-number" line="3">    <span class="token parameter variable">-d</span> 数字       使用数字作为文件描述符来获取密码
+</span><span class="code-line line-number" line="4">    <span class="token parameter variable">-p</span> 密码       将密码作为参数提供（安全上不明智）
+</span><span class="code-line line-number" line="5">    <span class="token parameter variable">-e</span>            密码以环境变量 <span class="token string">"SSHPASS"</span> 的形式传递
+</span><span class="code-line line-number" line="6">    如果没有参数 - 密码将从标准输入中获取
+</span><span class="code-line line-number" line="7">
+</span><span class="code-line line-number" line="8">    <span class="token parameter variable">-P</span> 提示       sshpass 搜索以检测密码提示的字符串
+</span><span class="code-line line-number" line="9">    <span class="token parameter variable">-v</span>            显示详细信息
+</span><span class="code-line line-number" line="10">    <span class="token parameter variable">-h</span>            显示帮助信息（本屏幕）
+</span><span class="code-line line-number" line="11">    <span class="token parameter variable">-V</span>            打印版本信息
+</span><span class="code-line line-number" line="12">只能使用 -f、-d、-p 或 <span class="token parameter variable">-e</span> 中的一个
+</span></code><div onclick="copied(this)" data-code="用法: sshpass [-f|-d|-p|-e] [-hV] 命令 参数
+    -f 文件名     从文件中获取密码
+    -d 数字       使用数字作为文件描述符来获取密码
+    -p 密码       将密码作为参数提供（安全上不明智）
+    -e            密码以环境变量 &#x22;SSHPASS&#x22; 的形式传递
+    如果没有参数 - 密码将从标准输入中获取
+
+    -P 提示       sshpass 搜索以检测密码提示的字符串
+    -v            显示详细信息
+    -h            显示帮助信息（本屏幕）
+    -V            打印版本信息
+只能使用 -f、-d、-p 或 -e 中的一个
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="实例"><a class="anchor" aria-hidden="true" tabindex="-1" href="#实例"><span class="octicon octicon-link"></span></a>实例</h3>
+<p>1.明文传输密码（<strong>不建议</strong>）</p>
+<pre class="language-shell"><code class="language-shell code-highlight"><span class="code-line line-number" line="1">sshpass <span class="token parameter variable">-p</span> <span class="token string">'my_pass_here'</span> <span class="token function">ssh</span> aaronkilik@10.42.0.1 <span class="token string">'df -h'</span>
+</span></code><div onclick="copied(this)" data-code="sshpass -p &#x27;my_pass_here&#x27; ssh aaronkilik@10.42.0.1 &#x27;df -h&#x27;
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>2.使用文件传输密码</p>
+<pre class="language-shell"><code class="language-shell code-highlight"><span class="code-line line-number" line="1">sshpass <span class="token parameter variable">-f</span> password_filename <span class="token function">ssh</span> aaronkilik@10.42.0.1 <span class="token string">'df -h'</span>
+</span></code><div onclick="copied(this)" data-code="sshpass -f password_filename ssh aaronkilik@10.42.0.1 &#x27;df -h&#x27;
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>3.使用环境变量 <code>SSHPASS</code></p>
+<pre class="language-shell"><code class="language-shell code-highlight"><span class="code-line line-number" line="1">sshpass <span class="token parameter variable">-e</span> <span class="token function">ssh</span> aaronkilik@10.42.0.1 <span class="token string">'df -h'</span>
+</span></code><div onclick="copied(this)" data-code="sshpass -e ssh aaronkilik@10.42.0.1 &#x27;df -h&#x27;
+" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>更多使用详情请参考 <a href="https://linux.cn/article-8086-1.html">https://linux.cn/article-8086-1.html</a> 。</p>
 <style>markdown-style pre .copied {
   display: flex;
   position: absolute;
@@ -251,7 +255,7 @@ function copied(target, str) {
   </span> 个Linux命令
   <br /> Copyright 2021-2023 <a href="https://gaozih.top">Gaozih</a> © All Rights Reserved.
 </div>
-<script type="text/javascript" src="../js/dt.js?v=1702715436554"></script>
-<script type="text/javascript" src="../js/index.js?v=1702715436554"></script>
+<script type="text/javascript" src="../js/dt.js?v=1702715436082"></script>
+<script type="text/javascript" src="../js/index.js?v=1702715436082"></script>
 </body>
 </html>
